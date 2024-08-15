@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking</title>
+    <link rel="icon" type="image/png" href="./images/logo.jpeg" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./" target="_self">
+          <img
+            src="./images/logo.jpeg"
+            alt="Application logo"
+            height="75"
+            width="75"
+            style="
+              border-radius: 10px;
+              float: left;
+              margin-right: 10px;
+              margin-left: 5px;
+            "
+          />
+        </a>
+        <span style="font-size: xx-large">AutoMob <br />Mechanic</span>
+        <br /><br />
+        <div style="font-size: large">
+          <span>
+            <a href="./" target="_self">Home</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="./services.html" target="_self">Services</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="booking.html" target="_blank">Booking</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="mailto:contact@automob.co.in" target="_blank"
+              >contact@automob.co.in</a
+            >
+          </span>
+          &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="tel:+919847336265" target="_blank">+91 984-7336-265</a>
+          </span>
+        </div>
+        <!--hr - to draw a horizontal line-->
+        <hr
+          style="border: 1px solid #000; margin-top: 10px; margin-bottom: 20px"
+        />
+      </nav>
+    </header>
+
+    <div>
+      <h1>Schedule your Appointment</h1>
+      <article>
+        <form action="booking-success.html" method="post">
+          <label for="date">Appointment Date:</label>
+          <input type="date" name="appointment-date" required /> <br />
+          <br />
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" rows="4" cols="22" required>
+Enter your Address here..</textarea
+          >
+          <br />
+          <br />
+          <label for="city">City:</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            required
+            placeholder="Mumbai, Pune ..."
+          />
+          <br />
+          <br />
+          <label for="state">State:</label>
+          <input
+            list="state"
+            name="state"
+            required
+            placeholder="Kerala, Makarashtra ..."
+          />
+          <datalist id="state">
+            <option value="assam">Assam</option>
+            <option value="bihar">Bihar</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="goa">Goa</option>
+          </datalist>
+          <br />
+          <br />
+          <label for="Notification">Send Notification:</label>
+          <input
+            type="checkbox"
+            id="Notification1"
+            value="email"
+            required
+          />Email <input type="checkbox" id="Notification2" value="sms" />SMS
+          <br />
+          <br />
+          <a href="./booking-success.html">
+            <input type="button" value="Book" />
+          </a>
+        </form>
+      </article>
+    </div>
+
+    <hr style="border: 1px solid #000; margin-top: 10px; margin-bottom: 0px" />
+    <footer>
+      Copyright &copy; 2024 AutoMob-Mechanic. All Rights Reserved.
+    </footer>
+  </body>
+</html>

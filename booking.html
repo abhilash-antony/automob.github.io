@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Booking</title>
+    <link rel="icon" type="image/png" href="./images/logo.jpeg" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./" target="_self">
+          <img
+            src="./images/logo.jpeg"
+            alt="Application logo"
+            height="75"
+            width="75"
+            style="
+              border-radius: 10px;
+              float: left;
+              margin-right: 10px;
+              margin-left: 5px;
+            "
+          />
+        </a>
+        <span style="font-size: xx-large">AutoMob <br />Mechanic</span>
+        <br /><br />
+        <div style="font-size: large">
+          <span>
+            <a href="./" target="_self">Home</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="./services.html" target="_self">Services</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="booking.html" target="_blank">Booking</a>
+          </span>
+          &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="mailto:contact@automob.co.in" target="_blank"
+              >contact@automob.co.in</a
+            >
+          </span>
+          &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+          <span>
+            <a href="tel:+919847336265" target="_blank">+91 984-7336-265</a>
+          </span>
+        </div>
+        <!--hr - to draw a horizontal line-->
+        <hr
+          style="border: 1px solid #000; margin-top: 10px; margin-bottom: 20px"
+        />
+      </nav>
+    </header>
+    <!-- Form -->
+    <article>
+      <form action="appointment.html" method="post">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="John Mckenzy"
+          required
+          pattern="^[A-Za-z]+ [A-Za-z]+$"
+        />
+        <br />
+        <br />
+        <label for="email">Email Id:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@gmail.com"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          required
+        />
+        <br />
+        <br />
+        <label for="phn">Phone Number:</label>
+        <select id="phn" required>
+          <option value="" selected>country code</option>
+          <option value="+213">+213</option>
+          <option value="+91">+91</option>
+          <option value="+244">+244</option>
+          <option value="+61">+61</option>
+          <option value="+973" disabled>+973</option>
+        </select>
+        <input
+          type="text"
+          name="num"
+          placeholder="1234567890"
+          pattern="\d{10}"
+          required
+          title="Please enter your number"
+        />
+        <br />
+        <br />
+        <label for="service">Select Service:</label>
+        <select id="service" required>
+          <option value="preventive-maintenance-service" selected>
+            Preventive Maintenance Service
+          </option>
+          <option value="body-repair-service">Body Repair Service</option>
+          <option value="car-care-service">Car Care Service</option>
+        </select>
+        <br />
+        <br />
+        <label for="carmake">Car Make:</label>
+        <input
+          list="carmake"
+          name="carmake"
+          required
+          placeholder="Suzuki, Toyota ..."
+        />
+        <datalist id="carmake">
+          <option value="mahindra">Mahindra</option>
+          <option value="honda">Honda</option>
+          <option value="hyundai">Hyundai</option>
+          <option value="ford">Ford</option>
+          <option value="toyota">Toyota</option>
+          <option value="nissan">Nissan</option>
+        </datalist>
+        <br />
+        <br />
+        <label for="carmodel">Car Model:</label>
+        <input
+          type="text"
+          name="model"
+          required
+          placeholder="Alto, Innova ..."
+        />
+        <br />
+        <br />
+        <label for="fuel">Fuel Type:</label>
+        <input
+          type="radio"
+          name="fuel"
+          value="petrol"
+          id="fuel0"
+          required
+        />Petrol
+        <input type="radio" name="fuel" value="dielse" id="fuel1" />Diesel
+        <input type="radio" name="fuel" value="lpg" id="fuel2" />LPG
+        <input type="radio" name="fuel" value="others" id="fuel3" />Others
+        <br />
+        <br />
+        <label for="kms">Kiloeters Ran:</label>
+        <input type="number" name="kms" id="kms" required placeholder="..kms" />
+        <br />
+        <br />
+        <a href="./appointment.html">
+          <input
+            type="button"
+            name="appointment"
+            id="appointment"
+            value="Schedule an Appointment"
+        /></a>
+      </form>
+    </article>
+    <hr style="border: 1px solid #000; margin-top: 10px; margin-bottom: 0px" />
+    <footer>
+      Copyright &copy; 2024 AutoMob-Mechanic. All Rights Reserved.
+    </footer>
+  </body>
+</html>
